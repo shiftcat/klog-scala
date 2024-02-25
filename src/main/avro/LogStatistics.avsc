@@ -1,0 +1,77 @@
+{
+  "namespace": "com.example.kstreams.model.dto",
+  "type": "record",
+  "name": "LogStatistics",
+  "fields": [
+    {
+      "name": "statType",
+      "type": {
+        "name" : "StatType",
+        "type": "enum",
+        "symbols":  ["SERVICE", "CHANNEL", "SERVICE_OPERATION"]
+      }
+    },
+    {
+      "name": "key",
+      "type": "bytes"
+    },
+    {
+      "name": "window",
+      "type": {
+        "name": "StatWindow",
+        "type": "record",
+        "fields":  [
+          {
+            "name": "start",
+            "type": "long"
+
+          },
+          {
+            "name": "end",
+            "type": "long"
+          }
+        ]
+      }
+    },
+    {
+      "name": "totalCount",
+      "type": "long"
+    },
+    {
+      "name": "successCount",
+      "type": "long"
+    },
+    {
+      "name": "userErrorCount",
+      "type": "long"
+    },
+    {
+      "name": "serverErrorCount",
+      "type": "long"
+    },
+    {
+      "name": "overOneCount",
+      "type": "long"
+    },
+    {
+      "name": "overThreeCount",
+      "type": "long"
+    },
+    {
+      "name": "minDuration",
+      "type": "long"
+    },
+    {
+      "name": "maxDuration",
+      "type": "long"
+    },
+    {
+      "name": "totalDuration",
+      "type": "long"
+    },
+    {
+      "name": "durationAverage",
+      "type": "double"
+    }
+  ]
+}

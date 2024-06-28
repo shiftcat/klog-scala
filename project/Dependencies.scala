@@ -1,10 +1,10 @@
-import sbt.*
+import sbt._
 
 object Dependencies {
   val avroVersion = "1.11.3"
   val avro4sVersion = "4.1.1"
-//  val kafkaVersion = "3.4.0"
-   val kafkaVersion = "3.1.0"
+  //  val kafkaVersion = "3.4.0"
+  val kafkaVersion = "3.1.0"
   val jacksonVersion = "2.16.1"
 
   val scalaTest = "org.scalatest" %% "scalatest" % "3.2.17" % Test
